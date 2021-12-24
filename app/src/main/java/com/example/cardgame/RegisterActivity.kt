@@ -1,5 +1,6 @@
 package com.example.cardgame
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -24,19 +25,21 @@ class RegisterActivity : AppCompatActivity() {
             var password = passwordET.text.toString()
 
             if (email.isEmpty()){
-                Toast.makeText(this, "Please Specify Email", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please Specify Email!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
             if (password.isEmpty()){
-                Toast.makeText(this, "Please Specify Password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please Specify Password!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { a ->
                     if (a.isSuccessful){
-                        Toast.makeText(this, "User Registered Successfully", Toast.LENGTH_SHORT).show()
+                        emailET.text = ""
+                        passwordET.text = ""
+                        Toast.makeText(this, "User Registered Successfully!", Toast.LENGTH_SHORT).show()
                     }
                 }
         }
