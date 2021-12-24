@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -32,12 +33,12 @@ class RegisterActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            //FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
-            //    .addOnCompleteListener { a ->
-            //        if (a.isSuccessful){
-            //            Toast.makeText(this, "User Registered Successfully", Toast.LENGTH_SHORT).show()
-            //        }
-            //    }
+            FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener { a ->
+                    if (a.isSuccessful){
+                        Toast.makeText(this, "User Registered Successfully", Toast.LENGTH_SHORT).show()
+                    }
+                }
         }
     }
 
