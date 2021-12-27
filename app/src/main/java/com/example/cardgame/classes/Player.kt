@@ -1,5 +1,9 @@
 package com.example.cardgame.classes
 
-data class Player(val email: String, val password: String, val cards: ArrayList<Card>?){
+data class Player(val emailArg: String, val passwordArg: String, val cardsArg: ArrayList<Card>?){
+
+    var email = emailArg
+    var password = passwordArg
+    var cards = cardsArg
 
 }

@@ -39,7 +39,7 @@ class RegisterActivity : AppCompatActivity() {
                     if (a.isSuccessful){
                         emailET.text = ""
                         passwordET.text = ""
-                        Toast.makeText(this, "User Registered Successfully!", Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this, ChooseCardsActivity::class.java))
                     }
                 }
         }
