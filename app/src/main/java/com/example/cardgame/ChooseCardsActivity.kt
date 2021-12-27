@@ -2,6 +2,7 @@ package com.example.cardgame
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ListView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -21,6 +22,6 @@ class ChooseCardsActivity : AppCompatActivity() {
 
         var db = FirebaseDatabase.getInstance().getReference("Card")
 
-        var cardTable = db.child(auth.currentUser?.uid!!).get()
+        var cardTable = db.child(auth.currentUser?.uid!!).child("Card").child("TestCard").get()//არ მუშაობს!!
     }
 }
