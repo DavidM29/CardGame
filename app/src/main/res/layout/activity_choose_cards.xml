@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".ChooseCardsActivity"
     android:scrollbars="vertical"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/valle2">
 
     <ListView
         android:id="@+id/cardsList"
@@ -19,13 +20,20 @@
         android:layout_margin="10dp"/>
 
     <Button
+        android:shadowColor="@color/teal_200"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:textSize="25sp"
+        android:shadowRadius="8"
         android:id="@+id/createCardBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create Your Own Card"
+        android:text="Create your fighter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardsList" />
+        app:layout_constraintTop_toBottomOf="@+id/cardsList"
+        android:background=""/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

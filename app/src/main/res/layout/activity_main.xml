@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/download">
 
     <TextView
         android:id="@+id/textView3"
@@ -15,7 +16,12 @@
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#00E5FF"
+        android:shadowDy="0.0"
+        android:shadowRadius="12"
+        android:shadowDx="0.0"
+        android:shadowColor="@color/teal_200"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -35,7 +41,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#17B568"
+        android:shadowColor="#1DE9B6"
+        android:shadowDx="0.0"
+        android:shadowRadius="5"
+        android:shadowDy="0.0"/>
 
     <TextView
         android:id="@+id/playerNumTV"
@@ -56,7 +67,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playerNumTV"
         android:layout_margin="10dp"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:textColorHint="@color/black"/>
 
     <EditText
         android:hint="Password"
@@ -68,7 +80,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailET"
         android:inputType="textPassword"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:textColorHint="@color/black"/>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -86,9 +99,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Log In"
-            android:textSize="25sp"
+            android:textColor="#00E5FF"
+            android:textSize="20sp"
             android:layout_weight="1"
-            android:layout_marginHorizontal="20dp"/>
+            android:layout_marginHorizontal="20dp"
+            android:background=""/>
 
         <Button
             android:id="@+id/logOutBTN"
@@ -96,9 +111,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Log Out"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:layout_weight="1"
-            android:layout_marginHorizontal="20dp"/>
+            android:layout_marginHorizontal="20dp"
+            android:background=""/>
 
 
     </LinearLayout>
@@ -108,10 +124,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register"
+        android:textColor="@color/purple_700"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:background=""/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
