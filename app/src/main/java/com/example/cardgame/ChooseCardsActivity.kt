@@ -1,5 +1,6 @@
 package com.example.cardgame
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -20,6 +21,7 @@ import com.google.firebase.ktx.Firebase
 class ChooseCardsActivity : AppCompatActivity() {
 
     lateinit var cardsList: ListView
+    lateinit var adapter: ArrayAdapter<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,7 +50,7 @@ class ChooseCardsActivity : AppCompatActivity() {
                     )
                 }
 
-                var adapter:ArrayAdapter<String> = ArrayAdapter(context, android.R.layout.simple_list_item_1, list)
+                adapter= ArrayAdapter(context, android.R.layout.simple_list_item_1, list)
                 cardsList.adapter = adapter
                 adapter.notifyDataSetChanged()
             }
@@ -60,7 +62,13 @@ class ChooseCardsActivity : AppCompatActivity() {
         })
 
         cardsList.setOnItemClickListener { parent, view, position, id ->
-
+            var intent = Intent(this, CardInfoActivity::class.java)
+            var selectedCard = cardArray.find { c -> c.name == adapter.getItem(position) }
+            intent.putExtra("CardName", selectedCard!!.name)
+            intent.putExtra("Attack", selectedCard!!.attack)
+            intent.putExtra("Health", selectedCard!!.health)
+            intent.putExtra("Defence", selectedCard!!.defence)
+            startActivity(intent)
         }
     }
 }
