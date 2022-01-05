@@ -27,7 +27,7 @@ class ChooseCardsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose_cards)
 
-        var cardArray: ArrayList<Card> = ArrayList<Card>()
+        var cardArray: ArrayList<Card> = ArrayList()
         val context = this
         var list = mutableListOf<String>()
         cardsList = findViewById(R.id.cardsList)

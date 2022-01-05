@@ -6,7 +6,11 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.example.cardgame.classes.Player
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -19,6 +23,8 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         init()
+
+        val db = FirebaseDatabase.getInstance().getReference("players")
 
         submitBtn.setOnClickListener {
             var email = emailET.text.toString()
@@ -37,6 +43,7 @@ class RegisterActivity : AppCompatActivity() {
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { a ->
                     if (a.isSuccessful){
+
                         emailET.text = ""
                         passwordET.text = ""
                         startActivity(Intent(this, ChooseCardsActivity::class.java))
