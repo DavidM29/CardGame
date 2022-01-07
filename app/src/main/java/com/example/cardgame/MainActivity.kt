@@ -8,13 +8,8 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var playerNumTV: TextView
-    private lateinit var emailET: TextView
-    private lateinit var passwordET: TextView
-    private lateinit var logInBtn: Button
-    private lateinit var logOutBtn: Button
-    private lateinit var registerBtn: Button
-    private var firstPlayerLoggedIn = false
+    lateinit var playBtn: Button
+    lateinit var seeCardsBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,29 +17,13 @@ class MainActivity : AppCompatActivity() {
 
         init()
 
-        logInBtn.setOnClickListener {
-            if (firstPlayerLoggedIn) {
-                //მეორე მოთამაშეც თუ გაივლის ავტორიზაციას გადავა სათამაშო აქთივითიზე
-            } else {
-                //პირველი მოთამაშე გადის ავტორიზაციას
-                firstPlayerLoggedIn = true
-                playerNumTV.text = "2"
-                emailET.text = ""
-                passwordET.text = ""
-            }
-        }
-
-        registerBtn.setOnClickListener {
-            startActivity(Intent(this, RegisterActivity::class.java))
+        seeCardsBtn.setOnClickListener {
+            startActivity(Intent(this, CardsActivity::class.java))
         }
     }
 
     private fun init(){
-        playerNumTV = findViewById(R.id.playerNumTV)
-        emailET = findViewById(R.id.emailET)
-        passwordET = findViewById(R.id.passwordET)
-        logInBtn = findViewById(R.id.logInBTN)
-        logOutBtn = findViewById(R.id.logOutBTN)
-        registerBtn = findViewById(R.id.registerBTN)
+        playBtn = findViewById(R.id.playBtn)
+        seeCardsBtn = findViewById(R.id.seeCardsBtn)
     }
 }

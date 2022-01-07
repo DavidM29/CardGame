@@ -13,10 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CardGame">
         <activity
+            android:name=".CreateCardActivity"
+            android:exported="false" />
+        <activity
             android:name=".CardInfoActivity"
             android:exported="false" />
         <activity
-            android:name=".ChooseCardsActivity"
+            android:name=".CardsActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"

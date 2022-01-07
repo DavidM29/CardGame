@@ -15,7 +15,8 @@
         android:layout_marginBottom="100dp"
         android:hint="Card Name"
         android:textSize="30sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:gravity="center"/>
 
     <TableLayout
         android:layout_width="match_parent"
@@ -115,18 +116,10 @@
     </TableLayout>
 
     <Button
-        android:id="@+id/cardInfoSelectCardBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Select This Card"
-        android:textSize="15sp"/>
-
-    <Button
         android:id="@+id/cardInfoBackBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="40dp"
         android:text="Back"
         android:textSize="15sp"/>
 

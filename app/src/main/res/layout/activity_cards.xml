@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChooseCardsActivity"
+    tools:context=".CardsActivity"
     android:scrollbars="vertical"
     android:orientation="vertical"
     android:background="@drawable/valle2">
@@ -25,7 +25,7 @@
         android:shadowDy="0.0"
         android:textSize="25sp"
         android:shadowRadius="8"
-        android:id="@+id/createCardBTN"
+        android:id="@+id/createYourFighterBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create your fighter"
