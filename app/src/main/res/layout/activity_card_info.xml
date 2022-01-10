@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".CardInfoActivity"
     android:orientation="vertical"
-    android:gravity="center"
-    android:background="@drawable/images">
+    android:gravity="center">
 
     <TextView
         android:id="@+id/cardInfoCardName"
@@ -15,8 +14,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
         android:hint="Card Name"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
         android:gravity="center"/>
@@ -36,14 +33,12 @@
                 android:layout_weight="1"
                 android:textSize="20sp"
                 android:text="Attack"
-                android:textColor="@color/white"
                 android:gravity="center"/>
 
             <TextView
                 android:layout_width="10dp"
                 android:layout_height="40dp"
                 android:text=":"
-                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:gravity="center"/>
@@ -54,7 +49,6 @@
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:textSize="20sp"
-                android:textColor="@color/white"
                 android:gravity="center"/>
 
         </TableRow>
@@ -69,14 +63,12 @@
                 android:layout_weight="1"
                 android:textSize="20sp"
                 android:text="Health"
-                android:textColor="@color/white"
                 android:gravity="center"/>
 
             <TextView
                 android:layout_width="10dp"
                 android:layout_height="40dp"
                 android:text=":"
-                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:gravity="center"/>
@@ -87,8 +79,7 @@
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:textSize="20sp"
-                android:gravity="center"
-                android:textColor="@color/white"/>
+                android:gravity="center"/>
 
         </TableRow>
 
@@ -102,15 +93,13 @@
                 android:layout_weight="1"
                 android:textSize="20sp"
                 android:text="Defence"
-                android:gravity="center"
-                android:textColor="@color/white"/>
+                android:gravity="center"/>
 
             <TextView
                 android:layout_width="10dp"
                 android:layout_height="40dp"
                 android:text=":"
                 android:textStyle="bold"
-                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:gravity="center"/>
 
@@ -120,22 +109,10 @@
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:textSize="20sp"
-                android:gravity="center"
-                android:textColor="@color/white"/>
+                android:gravity="center"/>
 
         </TableRow>
 
     </TableLayout>
-
-    <Button
-        android:id="@+id/cardInfoBackBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Back"
-        android:textColor="@color/white"
-        android:background="@android:color/transparent"
-        android:textSize="15sp"/>
-
 
 </LinearLayout>

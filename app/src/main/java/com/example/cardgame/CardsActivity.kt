@@ -30,16 +30,14 @@ class CardsActivity : AppCompatActivity() {
         cardsList.setOnItemClickListener { _, _, position, _ ->
             val intent = Intent(this, CardInfoActivity::class.java)
             val selectedCard = cardArray.find { c -> c.name == adapter.getItem(position) }
-            intent.putExtra("CardName", selectedCard!!.name)
-            intent.putExtra("Attack", selectedCard.attack)
-            intent.putExtra("Health", selectedCard.health)
-            intent.putExtra("Defence", selectedCard.defence)
-            finish()
+            intent.putExtra("SelectedCard", selectedCard)
             startActivity(intent)
         }
 
         createYourFighterBtn.setOnClickListener {
-            startActivity(Intent(this, CreateCardActivity::class.java))
+            var intent = Intent(this, CreateCardActivity::class.java)
+            intent.putExtra("Cards", cardArray)
+            startActivity(intent)
         }
 
     }
