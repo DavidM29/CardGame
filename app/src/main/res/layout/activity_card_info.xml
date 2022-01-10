@@ -115,13 +115,4 @@
 
     </TableLayout>
 
-    <Button
-        android:id="@+id/cardInfoBackBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Back"
-        android:textSize="15sp"/>
-
-
 </LinearLayout>

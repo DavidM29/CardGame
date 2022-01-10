@@ -10,9 +10,10 @@
     android:background="@drawable/valle2">
 
     <ListView
+        android:scrollbars="vertical"
         android:id="@+id/cardsList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="500dp"
         android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
