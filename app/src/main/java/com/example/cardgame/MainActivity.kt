@@ -26,4 +26,6 @@ class MainActivity : AppCompatActivity() {
         playBtn = findViewById(R.id.playBtn)
         seeCardsBtn = findViewById(R.id.seeCardsBtn)
     }
+
+
 }
