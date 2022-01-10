@@ -39,6 +39,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="Play"
+        android:textColor="@color/black"
+        android:background="@android:color/transparent"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,6 +54,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playBtn"
         android:textSize="20sp"
+        android:textColor="#FFEA00"
+        android:background="@android:color/transparent"
         android:text="Look At Available Cards"
         android:layout_marginTop="30dp"/>
 
