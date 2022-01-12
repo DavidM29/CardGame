@@ -6,13 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".WinnerActivity"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@drawable/unnamed">
 
     <TextView
         android:id="@+id/winnerText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Winner Player"
+        android:textColorHint="@color/black"
         android:textSize="35sp"/>
 
     <Button
@@ -20,7 +22,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Play Again"
+        android:textColor="#26B170"
         android:textSize="30sp"
+        android:background="@android:color/transparent"
         android:layout_marginTop="50dp"/>
 
 </LinearLayout>

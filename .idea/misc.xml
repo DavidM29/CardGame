@@ -7,10 +7,13 @@
         <entry key="..\:/Projects/Android/CardGame/app/src/main/res/layout/activity_cards.xml" value="0.30085470085470084" />
         <entry key="..\:/Projects/Android/CardGame/app/src/main/res/layout/activity_choose_cards.xml" value="0.25" />
         <entry key="..\:/Projects/Android/CardGame/app/src/main/res/layout/activity_create_card.xml" value="0.30085470085470084" />
-        <entry key="..\:/Projects/Android/CardGame/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Projects/Android/CardGame/app/src/main/res/layout/activity_play.xml" value="0.25" />
+        <entry key="..\:/Projects/Android/CardGame/app/src/main/res/layout/activity_main.xml" value="0.17831813576494426" />
         <entry key="..\:/Projects/Android/CardGame/app/src/main/res/layout/activity_register.xml" value="0.17831813576494426" />
-        <entry key="..\:/Projects/Android/CardGame/app/src/main/res/layout/activity_winner.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/aleko/CardGame/app/src/main/res/layout/activity_card_info.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/aleko/CardGame/app/src/main/res/layout/activity_cards.xml" value="0.13405797101449277" />
+        <entry key="..\:/Users/aleko/CardGame/app/src/main/res/layout/activity_create_card.xml" value="0.13405797101449277" />
+        <entry key="..\:/Users/aleko/CardGame/app/src/main/res/layout/activity_play.xml" value="0.33" />
+        <entry key="..\:/Users/aleko/CardGame/app/src/main/res/layout/activity_winner.xml" value="0.2" />
       </map>
     </option>
   </component>

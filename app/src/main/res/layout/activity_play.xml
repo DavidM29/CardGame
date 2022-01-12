@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PlayActivity">
+    tools:context=".PlayActivity"
+    android:background="@drawable/unnamed">
 
     <TextView
         android:id="@+id/textView6"
@@ -13,6 +14,7 @@
         android:layout_marginLeft="125dp"
         android:layout_marginTop="75dp"
         android:text="Player 1"
+        android:textColor="#FFEA00"
         android:textSize="30sp"
         android:textStyle="bold"
         android:gravity="center"
@@ -25,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:hint="Card Name"
+        android:textColor="@color/black"
         android:gravity="center"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -49,6 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Attack"
+        android:textColor="@color/purple_700"
         android:textSize="20sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="@+id/textView6"
@@ -61,6 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Defend"
+        android:textColor="#A5A1A1"
         android:textSize="20sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="@+id/textView6"
@@ -69,6 +74,7 @@
 
 
     <TextView
+        android:textColor="#DF4616"
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -86,6 +92,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Card Name"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         android:gravity="center"
@@ -111,6 +118,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Attack"
+        android:textColor="@color/purple_700"
         android:textSize="20sp"
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="@+id/textView8"
@@ -122,6 +130,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Defend"
+        android:textColor="#A5A1A1"
         android:textSize="20sp"
         android:layout_marginTop="10dp"
         android:enabled="false"
