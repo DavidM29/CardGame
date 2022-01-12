@@ -24,7 +24,7 @@ class CreateCardActivity : AppCompatActivity() {
     private lateinit var defenceCount: TextView
     private lateinit var pointsCountTv: TextView
     private lateinit var cards: ArrayList<Card>
-    private var pointsCount: Int = 12
+    private var pointsCount: Int = 20
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,8 +55,11 @@ class CreateCardActivity : AppCompatActivity() {
                 db.child(card.name).setValue(card).addOnCompleteListener { c ->
                     if (c.isSuccessful) {
                         Toast.makeText(this, "Card Created Successfully", Toast.LENGTH_SHORT).show()
-                        finish()
-                        startActivity(Intent(this, CardsActivity::class.java))
+
+                        inputCardName.text = ""
+                        attackCount.text = "1"
+                        healthCount.text = "50"
+                        defenceCount.text = "1"
                     }
                 }
             } else
@@ -82,7 +85,7 @@ class CreateCardActivity : AppCompatActivity() {
     private fun plusOnClickListeners(){
 
         plusAttack.setOnClickListener {
-            if (pointsCount > 0 && attackCount.text.toString().toInt() < 20){
+            if (pointsCount > 0){
                 var i = attackCount.text.toString().toInt()
                 i++
                 pointsCount--
@@ -103,7 +106,7 @@ class CreateCardActivity : AppCompatActivity() {
         }
 
         plusDefence.setOnClickListener {
-            if (pointsCount > 0 && defenceCount.text.toString().toInt() < 5){
+            if (pointsCount > 0){
                 var i = defenceCount.text.toString().toInt()
                 i++
                 pointsCount--
@@ -117,7 +120,7 @@ class CreateCardActivity : AppCompatActivity() {
     private fun minusOnClickListeners(){
 
         minusAttack.setOnClickListener {
-            if (attackCount.text.toString().toInt() > 10){
+            if (attackCount.text.toString().toInt() > 1){
                 var i = attackCount.text.toString().toInt()
                 i--
                 pointsCount++

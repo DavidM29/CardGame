@@ -13,6 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CardGame">
         <activity
+            android:name=".WinnerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PlayActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".CreateCardActivity"
             android:exported="false" />
         <activity
@@ -20,9 +27,6 @@
             android:exported="false" />
         <activity
             android:name=".CardsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

@@ -61,16 +61,18 @@ class CardsActivity : AppCompatActivity() {
                 val cards = snapshot.children
 
                 for (c in cards){
-                    list.add(c.child("name").value.toString())
+                    if (!list.contains(c.child("name").value.toString())) {
+                        list.add(c.child("name").value.toString())
 
-                    cardArray.add(
-                        Card(
-                            c.child("name").value.toString(),
-                            c.child("attack").value.toString().toInt(),
-                            c.child("health").value.toString().toInt(),
-                            c.child("defence").value.toString().toInt(),
+                        cardArray.add(
+                            Card(
+                                c.child("name").value.toString(),
+                                c.child("attack").value.toString().toInt(),
+                                c.child("health").value.toString().toInt(),
+                                c.child("defence").value.toString().toInt(),
+                            )
                         )
-                    )
+                    }
                 }
 
                 adapter= ArrayAdapter(context, android.R.layout.simple_list_item_1, list)
