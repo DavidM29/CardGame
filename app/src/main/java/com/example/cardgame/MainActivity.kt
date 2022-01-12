@@ -20,6 +20,10 @@ class MainActivity : AppCompatActivity() {
         seeCardsBtn.setOnClickListener {
             startActivity(Intent(this, CardsActivity::class.java))
         }
+
+        playBtn.setOnClickListener {
+            startActivity(Intent(this, PlayActivity::class.java))
+        }
     }
 
     private fun init(){
