@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="125dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="50dp"
         android:text="Player 1"
         android:textColor="#FFEA00"
         android:textSize="30sp"
@@ -46,31 +46,56 @@
         app:layout_constraintStart_toStartOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/player1CardName" />
 
+    <ProgressBar
+        android:id="@+id/player1Mana"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:progress="100"
+        android:progressTint="#0000FF"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/player1Health" />
+
+
     <Button
         android:id="@+id/player1AttackBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:enabled="false"
         android:text="Attack"
         android:textColor="@color/purple_700"
         android:textSize="20sp"
-        android:enabled="false"
         app:layout_constraintEnd_toEndOf="@+id/textView6"
         app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/player1Health" />
+        app:layout_constraintTop_toBottomOf="@+id/player1Mana" />
+
+    <Button
+        android:id="@+id/player1WeakAttack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weak Attack"
+        android:textSize="17sp"
+        android:enabled="false"
+        android:textColor="@color/purple_700"
+        android:tooltipText="Weak Attacks Don't Cost Mana"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/player1AttackBtn" />
 
     <Button
         android:id="@+id/player1DefendBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Defend"
-        android:textColor="#A5A1A1"
-        android:textSize="20sp"
         android:enabled="false"
+        android:text="Defend"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="@+id/textView6"
         app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/player1AttackBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/player1WeakAttack" />
 
 
     <TextView
@@ -78,7 +103,7 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="125dp"
         android:text="Player 2"
         android:gravity="center"
@@ -112,6 +137,18 @@
         app:layout_constraintStart_toStartOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/player2CardName" />
 
+    <ProgressBar
+        android:id="@+id/player2Mana"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:progress="100"
+        android:progressTint="#0000FF"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/player2Health" />
+
+
     <Button
         android:id="@+id/player2AttackBtn"
         android:layout_width="wrap_content"
@@ -123,20 +160,34 @@
         android:enabled="false"
         app:layout_constraintEnd_toEndOf="@+id/textView8"
         app:layout_constraintStart_toStartOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/player2Health" />
+        app:layout_constraintTop_toBottomOf="@+id/player2Mana" />
+
+    <Button
+        android:id="@+id/player2WeakAttack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="Weak Attack"
+        android:textColor="@color/purple_700"
+        android:textSize="17sp"
+        android:tooltipText="Weak Attacks Don't Cost Mana"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/player2AttackBtn" />
+
 
     <Button
         android:id="@+id/player2DefendBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Defend"
-        android:textColor="#A5A1A1"
-        android:textSize="20sp"
-        android:layout_marginTop="10dp"
         android:enabled="false"
+        android:text="Defend"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/textView8"
         app:layout_constraintStart_toStartOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/player2AttackBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/player2WeakAttack"
+        android:layout_marginTop="5dp"/>
 
     <TextView
         android:id="@+id/textView9"
